@@ -20,8 +20,8 @@ $result = mysqli_query($conn, $querry);
     <table> 
     <tr>
         <th><a href="maintenance.php">Maintenance</a></th>
-        <th>Reports</th>
-        <th>Transactions</th>
+        <th><a href="reports.php">Reports</a></th>
+        <th><a href="transaction.php">Transactions</a></th>
     </tr>
     </table>
 
@@ -52,7 +52,7 @@ $result = mysqli_query($conn, $querry);
                             { 
 
                                echo "<tr>
-                                <td>".$bid=$record['b_id']. "</td>
+                                <td>".$id=$record['id']. "</td>
                                  <td>".$bname=$record['b_name']. "</td>
                                  <td>".$bauthor=$record['b_author']. "</td>
 
