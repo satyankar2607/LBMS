@@ -103,8 +103,8 @@ include 'db.php';
 			<input type="email" id="email" placeholder = "EMAIL" name="email" required>
 			<label for="password">Password:</label>
 			<input type="password" id="password" placeholder = "PASSWORD" name="pass" required>
-            <input type="radio" id="usertype"  name="usertype" value ="owner" required>Owner
-            <input type="radio" id="usertype"  name="usertype" value ="vendor" required>Vendor <br><br>
+            <input type="radio" id="usertype"  name="usertype" value ="owner" required>librarian
+            <input type="radio" id="usertype"  name="usertype" value ="vendor" required>student <br><br>
 
 
 			<input type="submit" value="Register"class="btn btn-primary">

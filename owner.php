@@ -19,8 +19,10 @@ $result = mysqli_query($conn, $querry);
     <br>
     <table> 
     <tr>
-        <th><a href="maintenance.php">Maintenance</a></th>
-        <th><a href="reports.php">Reports</a></th>
+        <th><a href="maintenance.php">Maintenance</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><a href="reports.php">Reports</a>
+        &nbsp;&nbsp;&nbsp;</th>
         <th><a href="transaction.php">Transactions</a></th>
     </tr>
     </table>
@@ -41,6 +43,7 @@ $result = mysqli_query($conn, $querry);
                                 <th>Book ID</th>
                                 <th>Book Name</th>
                                 <th>Author Name</th>
+                                <th>Available</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,7 +58,7 @@ $result = mysqli_query($conn, $querry);
                                 <td>".$id=$record['id']. "</td>
                                  <td>".$bname=$record['b_name']. "</td>
                                  <td>".$bauthor=$record['b_author']. "</td>
-
+                                 <td>".$available=$record['present']. "</td>
                                
                                 </tr>";
                                 
@@ -100,34 +103,3 @@ $result = mysqli_query($conn, $querry);
 </body>
 
 </html>
-<!-- <?php
-
-$id = $_GET['id'];
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    // $servername = "localhost";
-    // $username = "root";
-    // $password = ""; 
-    // $database = "darx";
-    // $conn = mysqli_connect($servername, $username, $password, $database);
-
-    $blogdata = $_POST["blogdata"];
-    $id = $_POST["sno"];
-
-    $sql = "INSERT INTO `blogs` (`id`, `blogdata`) VALUES ('$id', '$blogdata')";
-    $result = mysqli_query($conn, $sql);
-
-    header("location: your_blogs.php?id=$id");
-
-
-}
-?>
-
-<h2>Write your blog here:</h2>
-
-<form action = "/acxiom/owner.php" method = "POST">
-    <textarea name="blogdata" rows="25" cols="100"></textarea>
-    <input type="hidden" name="sno" value=<?php echo "$id"; ?>>
-<input type="submit" value="SUBMIT" class="btn btn-primary">
-</form> -->

@@ -1,14 +1,9 @@
 <?php
 include 'db.php';
-$id = $_GET['id'];
 
-$sql = "SELECT * FROM books_issued  WHERE books_issued.m_id = '$id' ";
-$result = mysqli_query($conn, $sql);
-$record=mysqli_fetch_assoc($result);
 
-$b_id = $record['b_id'];
 
-$sql = "SELECT * FROM books  WHERE books.id = $b_id  ";
+$sql = "SELECT * FROM books WHERE books.present = 'yes'  ";
 $result1 = mysqli_query($conn, $sql);
 
 
@@ -24,22 +19,8 @@ $result1 = mysqli_query($conn, $sql);
 </head>
 
 <body>
-    <h2><center>USER(vendor) HOME PAGE</center></h2>
-    <br>
-    <br>
-    
-    <table> 
-    <tr>
-        <th><a href="available_books.php">Available Books</a>
-        &nbsp;&nbsp;&nbsp;</th>
-        <?php  
-         echo "<th>
-            <a href = 'transaction_student.php?id=$id'>Transactions</a> 
-        </th>";  
-       ?>
-    </tr>
-    </table>
-    
+    <h2><center>AVAILABLE BOOKS</center></h2>
+  
 
 <div class="content-wrapper">
             <!-- Main content -->
@@ -62,7 +43,7 @@ $result1 = mysqli_query($conn, $sql);
                         <tbody>
 
                         <?php
-                        if($result)
+                        if($result1)
                         {
                             while($record=mysqli_fetch_assoc($result1))
                             { 
@@ -116,4 +97,3 @@ $result1 = mysqli_query($conn, $sql);
 </body>
 
 </html>
-

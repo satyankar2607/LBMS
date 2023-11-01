@@ -20,19 +20,9 @@
           </div>
 
           <div class="form-group">
-            <input type="date" deafult = "<?php echo $record['start_date']   ?> " class="form-control" placeholder="start_date" name="start_date">
+           New Date: <input type="date" deafult = "<?php echo $record['start_date']   ?> " class="form-control" placeholder="start_date" name="start_date">
           </div>
-          <div class="form-group">
-            MEMBERSHIP EXTENSION:
-            <div class="form-group">
-              <input type="radio" class="form-check-input" name="duration" value="6">Six Month
-            </div>
-            <div class="form-group">
-              <input type="radio" class="form-check-input" name="duration" value="12">1 Year
-            </div>
-            <div class="form-group">
-                <input type="radio" class="form-check-input" name="duration" value="24">2 Year
-            </div>
+          
 
             <div class="form-group">
                <input type="radio" class="form-check-input" name="membership" value="remove"><h4>member remove: </h4>

@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   
   $id = $_POST["id"];
   $start_date = $_POST["start_date"]; 
-  $duration = $_POST["duration"];
+  
   $membership = $_POST["membership"];
 
   if ($membership == "remove"){

@@ -1,18 +1,22 @@
 <?php
 include 'db.php';
 
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   
 
     $b_name = $_POST["b_name"];
-    echo $b_name;
 
 
     $sql = "SELECT * FROM books  WHERE books.b_name = '$b_name' ";
     $result = mysqli_query($conn, $sql);
-    
-    if($result){
+    $record=mysqli_fetch_assoc($result);
+
+    if($record["present"] == 'yes'){
         echo ' Book is present!!';
+    }
+    else{
+        echo ' Book is not present!!';
     }
 }
 
